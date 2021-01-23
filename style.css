@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-yellow: #F3A400;
+    --color-green: #005248;
+    --color-white: #FFFFFF;
+}
+
+body {
+    height: 350vh;
+    width: 100%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://dl.dropboxusercontent.com/s/799617vmvgl9k2a/back1.png?dl=0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 2rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: .9em;
+}
+
+header #title {
+    width: 100%;
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.8em;
+    
+}
+header #description {
+    color: var(--color-green);
+    font-weight: 500;
+    font-size: .9em;
+}
+
+header #description::before {
+    content: '.';
+    color: white;
+}
+header #description::after {
+    content: '.';
+    color: white;
+}
+
+@media (min-width:768px) {
+    header {
+        font-size: 1.5em;
+    }
+    
+    header #description::before {
+        content: none;
+        color: white;
+    }
+    header #description::after {
+        content: none;
+        
+    }
+    
+}
+
+
+/*NAV*/
+
+nav {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 82, 72,.75);
+    text-align: center;
+    border-radius: 15px;
+    border: 3px solid white;
+    padding: 30px;
+}
+
+nav .content {
+    width: 100%;
+    height: 100%;
+}
+
+nav .content .c_info #b_title {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    color: #F3A400;
+}
+
+nav .content .c_info .inputs {
+    width: 90%;
+    height: 180px;
+    margin: 0 auto;
+    border-top: 3px solid white ;
+    border-bottom: 3px solid white ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav .content .c_info .inputs div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav .content .c_info .inputs div label {
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    nav .content .c_info .inputs {
+        height: 100px;
+        flex-direction: row;
+    }
+    
+    nav .content .c_info .inputs div {
+        width: 33%;
+        height: auto;
+    }
+}
+
+nav .content .c_info .inputs input {
+    width: 90%;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+nav .content .c_info .inputs input:first-child {
+    margin-top: 15px;
+}
+nav .content .c_info .inputs input:last-child {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    nav .content .c_info .inputs input {
+        height: 30px;
+    }
+}
+
+nav .content .c_info .inputs input {
+    color: #005248;
+    text-align: center;
+}
+nav .content .c_info .inputs input::placeholder {
+    color: #005248;
+    text-align: center;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    display: none;
+}
+
+
+nav .content .c_ques #b_title {
+    width: 100%;
+    height: auto;
+    margin: 20px 0px 10px;
+    color: #F3A400;
+    
+}
+
+nav .content .c_ques .inputs {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    border: 3px solid white;
+    border-radius: 10px;
+    
+}
+
+nav .content .c_ques .inputs .ques1 {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+nav h3 {
+    width: 100%;
+    text-align: left;
+    font-size: .9em;
+    
+}
+
+nav .slv {
+    text-align: center;
+}
+
+nav h3 span {
+    color: #F3A400;
+}
+
+@media (min-width: 768px) {
+    nav h3 {
+        font-size: 1.6em;
+        font-weight: lighter;
+    }
+}
+
+
+
+nav .content .c_ques .inputs .table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+table {
+    font-size: .5em;
+    table-layout: fixed;
+    width: 100%;   
+}
+
+@media (min-width: 768px) {
+    table {
+        font-size: .7em; 
+    }
+}
+
+table, th, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px 4px;
+}
+
+
+table tr th {
+    background-color: #f3a400;
+    font-weight: bold;
+    
+    
+    
+}
+table tr:first-child td:first-child {
+    visibility: hidden;
+    
+}
+
+table tr td .radio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffffff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #f3a400;
+    content: '';
+    display: inline-block;
+    visibility: visible; 
+}
+
+.ques2 {
+    width: 95%;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.ques2 .section_1,.section_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 50px;
+;
+}
+.ques2 .section_2 , .section_1 {
+    margin-top: 30px;
+}
+
+
+.ques2 div[class^="section_"] option {
+    width: 100%;
+}
+
+.ques2 div[class^="section_"] select {
+    border: none;
+    outline: none;
+    height: 2em;
+    border-radius: 5px;
+    color: #005248;
+    text-align: center;
+    width: 300px;
+}
+
+@media (min-width: 768px) {
+    .ques2 div[class^="section_"] select {
+        
+        width: 500px;
+    }
+}
+
+
+.ques3 {
+    width: 95%;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.ques3 .radio {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ques3 .radio label {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .ques3 .radio label {
+        font-size: 1.2em;
+    }
+}
+
+.ques4 {
+    width: 95%;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.ques4 .checkbox {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ques4 .checkbox label {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .ques4 .checkbox label {
+        font-size: 1.2em;
+    }
+}
+
+
+.ques5 {
+    width: 95%;
+    height: 225px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.ques5 .text-area {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+.ques5 .text-area textarea {
+    height: 155px;
+    width: 100%;
+    resize: vertical;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.ques5 .text-area textarea:focus {
+    border: none;
+    outline: none;
+    border: 3px solid #F3A400;
+}
+
+@media (min-width: 768px) {
+    .ques5 .text-area {
+        font-size: 1.2em;
+    }
+}
+
+.submit {
+    width: 95%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.submit button {
+    width: 90%;
+    height: 80%;
+    margin-bottom: 30px;
+    background-color: #F3A400;
+    border: 2px solid #ffffff;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+.submit button:focus {
+    outline: none;
+
+    
+}
+.submit button:active {
+    outline: none;
+    border: 4px solid #ffffff;
+    transform: scale(1.01);
+    
+}
+
+
+
+
+
+
